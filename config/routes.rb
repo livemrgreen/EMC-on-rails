@@ -1,4 +1,20 @@
 EMCOnRails::Application.routes.draw do
+  resources :communes
+
+  resources :adresses
+
+  resources :tarifs
+
+  resources :formations
+
+  resources :instruments
+
+  resources :ateliers
+
+  resources :professeurs
+
+  resources :eleves
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
