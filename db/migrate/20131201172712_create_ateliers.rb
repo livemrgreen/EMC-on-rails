@@ -3,6 +3,8 @@ class CreateAteliers < ActiveRecord::Migration
     create_table :ateliers do |t|
       t.string :nom
 
+      t.integer :professeur_id
+
       t.timestamps
     end
   end

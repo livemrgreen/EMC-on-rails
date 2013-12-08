@@ -4,6 +4,9 @@ class CreateEleves < ActiveRecord::Migration
       t.string :prenom
       t.string :nom
 
+      t.integer :tarif_id
+      t.integer :adresse_id
+
       t.timestamps
     end
   end

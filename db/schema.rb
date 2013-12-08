@@ -11,17 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131208115220) do
+ActiveRecord::Schema.define(version: 20131208120758) do
 
   create_table "adresses", force: true do |t|
     t.integer  "numero_rue"
     t.string   "nom_rue"
+    t.integer  "commune_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "ateliers", force: true do |t|
     t.string   "nom"
+    t.integer  "professeur_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +38,8 @@ ActiveRecord::Schema.define(version: 20131208115220) do
   create_table "eleves", force: true do |t|
     t.string   "prenom"
     t.string   "nom"
+    t.integer  "tarif_id"
+    t.integer  "adresse_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,6 +47,13 @@ ActiveRecord::Schema.define(version: 20131208115220) do
   create_table "eleves_ateliers", force: true do |t|
     t.integer  "eleve_id"
     t.integer  "atelier_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "eleves_formations", force: true do |t|
+    t.integer  "eleve_id"
+    t.integer  "formation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

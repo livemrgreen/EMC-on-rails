@@ -4,6 +4,8 @@ class CreateAdresses < ActiveRecord::Migration
       t.integer :numero_rue
       t.string :nom_rue
 
+      t.integer :commune_id
+
       t.timestamps
     end
   end
