@@ -1,4 +1,6 @@
 EMCOnRails::Application.routes.draw do
+  resources :cours
+
   resources :communes
 
   resources :adresses
