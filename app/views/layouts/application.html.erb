@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<h1>Ecole de musique de Castries</h1>
+				<nav>
+					<ul class="nav">
+						<li class="btn"><i class="icon-home"></i><%= link_to "Accueil", '/' %></li>
+						<li class="btn"><%= link_to "Eleves", eleves_path %></li>
+						<li class="btn"><%= link_to "Profs", professeurs_path %></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
 	<div class="container">
 		<%= yield %>
 	</div>
