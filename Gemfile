@@ -30,6 +30,7 @@ group :doc do
 end
 
 # DEPENDECIES
+gem 'bootstrap-sass'
 gem 'factory_girl_rails'
 gem 'faker'
 
